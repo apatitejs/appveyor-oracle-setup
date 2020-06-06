@@ -1,18 +1,20 @@
 var google = require('googleapis')
 var googleAuth = require('google-auth-library')
 
-var SCOPES = ['https://www.googleapis.com/auth/drive.metadata']
+var SCOPES = ['https://www.googleapis.com/auth/drive.readonly']
 
 // Get the credentials from https://console.developers.google.com/apis/credentials?project=node-apatitejs
 // Download the JSON file and paste contents below
 var credentials = {
-    client_id: 'FROM_LINK_ABOVE',
-    client_secret: 'FROM_LINK_ABOVE',
-    redirect_uris: 'FROM_LINK_ABOVE',
-    project_id: 'FROM_LINK_ABOVE',
-    auth_uri: 'FROM_LINK_ABOVE',
-    token_uri: 'FROM_LINK_ABOVE',
-    auth_provider_x509_cert_url: 'FROM_LINK_ABOVE'
+    installed: {
+        client_id: 'FROM_LINK_ABOVE',
+        client_secret: 'FROM_LINK_ABOVE',
+        redirect_uris: 'FROM_LINK_ABOVE',
+        project_id: 'FROM_LINK_ABOVE',
+        auth_uri: 'FROM_LINK_ABOVE',
+        token_uri: 'FROM_LINK_ABOVE',
+        auth_provider_x509_cert_url: 'FROM_LINK_ABOVE'
+    }
 }
 
 function authorize() {
